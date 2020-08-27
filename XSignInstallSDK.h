@@ -14,9 +14,10 @@
 
 /// 初始化XSignInstall SDK
 /// @param delegate 委托方法所在的类的对象
+/// @discussion 调用该方法前，需在Info.plist文件中配置键值对,键为com.XSigninstall.APP_KEY不能修改，值为相应的应用的appKey，可在XSignInstall官方后台查看
 + (void)initWithDelegate:(id<XSignInstallDelegate> _Nonnull)delegate;
 
-
+    
 /// 开发者在需要获取用户安装app后由web网页传递过来的”动态参数“（如邀请码、游戏房间号，渠道编号等）时调用该方法,可第一时间返回数据，可在任意位置调用
 /// @param completionHandler 回调block
 /// @discussion 1、不要自己保存动态安装参数，在每次需要用到参数时，请调用该方法去获取；
@@ -43,5 +44,8 @@
 /// @return bool  URL是否被XSignInstallSDK识别
 + (BOOL)continueUserActivity:(NSUserActivity *_Nonnull)userActivity;
 
+
+/// 当前XSignInstallSDK 版本号
++ (NSString *_Nullable)sdkVersion;
 
 @end
