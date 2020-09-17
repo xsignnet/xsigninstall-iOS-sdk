@@ -5,8 +5,9 @@
 @protocol XSignInstallDelegate <NSObject>
 @optional
 /// 唤醒时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
-/// @param params 动态参数对象
-- (void)getWakeUpParams:(NSDictionary *_Nullable)params;
+/// @param dic 动态参数对象
+- (void)getWakeUpParams:(NSDictionary *_Nullable)dic;
+
 @end
 
 @interface XSignInstallSDK : NSObject
@@ -45,7 +46,7 @@
 + (BOOL)continueUserActivity:(NSUserActivity *_Nonnull)userActivity;
 
 
-/// 当前XSignInstallSDK 版本号
+/// 当前XSignInstallSDK 版本号 "0.6.0"
 + (NSString *_Nullable)sdkVersion;
 
 @end
