@@ -46,7 +46,7 @@
 + (BOOL)continueUserActivity:(NSUserActivity *_Nonnull)userActivity;
 
 
-/// 当前XSignInstallSDK 版本号 "0.6.0"
+/// 当前XSignInstallSDK 版本号 "0.8.0"
 + (NSString *_Nullable)sdkVersion;
 
 @end
