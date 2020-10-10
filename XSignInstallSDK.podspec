@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'XSignInstallSDK'
-  s.version          = '0.7.0'
+  s.version          = '0.8.0'
   s.summary          = 'XSignInstallSDK'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
