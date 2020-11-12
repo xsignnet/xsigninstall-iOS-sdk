@@ -1,4 +1,5 @@
 # XSignInstallSDK
+详细文档访问 https://www.zsign.net
 
 1、cd到项目根目录，执行pod setup
 
@@ -11,4 +12,5 @@
 先执行：pod setup
 
 再清空搜索索引，让pod重建索引(可能需要等待一会)：rm ~/Library/Caches/CocoaPods/search_index.json
+
 
