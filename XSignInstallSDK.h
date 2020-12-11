@@ -1,7 +1,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-//#import "XSignInstallData.h"
 
 @interface XSignInstallData : NSObject
 @property (nonatomic,strong) NSDictionary * _Nullable data;//动态参数
@@ -37,7 +36,13 @@
 /// 注册量统计
 /// @discussion 使用XSignInstallSDK 控制中心提供的渠道统计时，在App用户注册完成后调用，可以统计渠道注册量。
 /// 必须在注册成功的时再调用该方法，避免重复调用，否则可能导致注册统计不准
+/// 如果需要统计注册并获取统计结果,可以使用 reportRegisterCompleted:failed:,两个接口任选其一,不能同时调用
 + (void)reportRegister;
+
+/// 注册量统计并获取统计结果
+/// @param completionHandler 统计注册量成功时的回调
+/// @param failedHandler 统计注册量失败时的回调
++ (void)reportRegisterCompleted:(void (^_Nullable)(void))completionHandler failed:(void (^_Nonnull)(void))failedHandler;
 
 
 /// 处理 URI schemes
