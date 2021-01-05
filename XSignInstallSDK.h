@@ -60,4 +60,5 @@
 /// 当前XSignInstallSDK 版本号
 + (NSString *_Nullable)sdkVersion;
 
+
 @end
