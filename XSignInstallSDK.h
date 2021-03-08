@@ -12,7 +12,6 @@
 /// 唤醒时获取h5页面动态参数（如果是渠道链接，渠道编号会一起返回）
 /// @param appData 动态参数对象
 - (void)getWakeUpParams:(XSignInstallData *_Nullable)appData;
-
 @end
 
 
@@ -20,7 +19,7 @@
 
 /// 初始化XSignInstall SDK
 /// @param delegate 委托方法所在的类的对象
-/// @discussion 调用该方法前，需在Info.plist文件中配置键值对,键为com.XSigninstall.APP_KEY不能修改，值为相应的应用的appKey，可在XSignInstall官方后台查看
+/// @discussion 调用该方法前，需在Info.plist文件中配置键值对,键为com.XSignInstall.APP_KEY不能修改，值为相应的应用的appKey，可在XSignInstall官方后台查看
 + (void)initWithDelegate:(id<XSignInstallDelegate> _Nonnull)delegate;
 
     
