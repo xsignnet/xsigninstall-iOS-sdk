@@ -31,7 +31,6 @@
 ///3.该方法可重复获取参数，如需在首次安装才获取安装参数，请自行判断.
 + (void)getInstallParams:(void (^_Nullable)(XSignInstallData * _Nullable appData))completionHandler;
 
-
 /// 注册量统计
 /// @discussion 使用XSignInstallSDK 控制中心提供的渠道统计时，在App用户注册完成后调用，可以统计渠道注册量。
 /// 必须在注册成功的时再调用该方法，避免重复调用，否则可能导致注册统计不准
@@ -41,7 +40,8 @@
 /// 注册量统计并获取统计结果
 /// @param completionHandler 统计注册量成功时的回调
 /// @param failedHandler 统计注册量失败时的回调
-+ (void)reportRegisterCompleted:(void (^_Nullable)(void))completionHandler failed:(void (^_Nonnull)(void))failedHandler;
++ (void)reportRegisterCompleted:(void (^_Nullable)(void))completionHandler failed:(void (^_Nullable)(void))failedHandler;
+
 
 
 /// 处理 URI schemes
